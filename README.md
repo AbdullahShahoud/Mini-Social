@@ -1,16 +1,45 @@
 # social_app
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+# 🚀 Mini Social Feed - Flutter Task
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 📱 نظرة سريعة
+تطبيق وسائل تواصل اجتماعي مصغر مبني بـ Flutter مع نظام مصادقة متكامل وإدارة منشورات.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ✅ المتطلبات المنفذة
+
+### 🛡️ نظام المصادقة
+- [x] تسجيل الدخول والتسجيل
+- [x] إدارة الرموز (Token Management)
+- [x] تجديد الرموز التلقائي (Auto Refresh)
+- [x] Interceptor لـ Dio
+
+### 📝 إدارة المنشورات
+- [x] عرض المنشورات مع Pagination
+- [x] إنشاء منشورات جديدة
+- [x] رفع وسائط متعددة
+- [x] تحديث وحذف المنشورات
+### 🏗️ البنية المعمارية
+- [x] Feature-Based Architecture
+- [x] Clean Architecture مبسطة
+- [x] BLoC/Cubit لإدارة الحالة
+- [x] Dependency Injection بـ GetIt
+## المتطلبات الأساسية
+
+- Flutter SDK 3.0 أو أعلى
+- Dart 3.0 أو أعلى
+- جهاز محاكاة أو جهاز فعلي
+
+## 🚀 التشغيل السريع
+
+```bash
+# 1. استنساخ المشروع
+git clone https://github.com/AbdullahShahoud/Mini-Social.git
+cd mini_social_feed
+# 2. تثبيت الاعتمادات
+flutter pub get
+
+# 3. تشغيل التطبيق
+flutter run
