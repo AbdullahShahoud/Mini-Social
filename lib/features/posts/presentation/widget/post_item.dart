@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 import '../../data/models/posts_Feed_Response.dart';
@@ -15,7 +17,7 @@ Widget buildPostItem(PostModel model, context) => Card(
           children: [
             CircleAvatar(
               radius: 25.0,
-              backgroundImage: NetworkImage('${model.media}'),
+              backgroundImage: NetworkImage('assets/images/persoin.jfif'),
             ),
             SizedBox(width: 15.0),
             Expanded(
@@ -57,13 +59,11 @@ Widget buildPostItem(PostModel model, context) => Card(
         ),
         ClipRRect(
           borderRadius: BorderRadiusGeometry.circular(5),
-          child: Image(
-            image: NetworkImage(
-              'https://image.freepik.com/free-photo/horizontal-shot-smiling-curly-haired-woman-indicates-free-space-demonstrates-place-your-advertisement-attracts-attention-sale-wears-green-turtleneck-isolated-vibrant-pink-wall_273609-42770.jpg',
-            ),
+          child: Image.file(
+            File('${model.media}'),
             fit: BoxFit.cover,
-            height: 200.0,
             width: double.infinity,
+            height: 200,
           ),
         ),
         Text(

@@ -176,19 +176,3 @@ void testApi() async {
     print('ERROR: $e');
   }
 }
-// # Mini Social Feed Application
-
-// تطبيق جوال مصغر لوسائل التواصل الاجتماعي مبنى باستخدام Flutter.
-
-// ## المتطلبات الأساسية
-
-// - Flutter SDK 3.0 أو أعلى
-// - Dart 3.0 أو أعلى
-// - جهاز محاكاة أو جهاز فعلي
-
-// ## إعداد المشروع
-
-// ### 1. استنساخ المشروع
-// ```bash
-// git clone <repository-url>
-// cd mini_social_feed

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 import '../../data/models/posts_Feed_Response.dart';
@@ -58,6 +60,15 @@ Widget buildPostItemEdite(
             width: double.infinity,
             height: 1.0,
             color: Color.fromARGB(255, 179, 177, 177),
+          ),
+        ),
+        ClipRRect(
+          borderRadius: BorderRadiusGeometry.circular(5),
+          child: Image.file(
+            File('${model.media}'),
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: 200,
           ),
         ),
         Text(
