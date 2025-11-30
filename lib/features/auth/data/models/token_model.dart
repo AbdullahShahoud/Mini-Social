@@ -12,13 +12,6 @@ class TokensModel {
     required this.refreshToken,
     required this.refreshTokenExpiresAt,
   });
-  // اذا كان الtoken يعيد كل هذا
-  // ايها اخزن ك token
-  //   final String tokenType;
-  //   final String accessToken;
-  //   final String accessTokenExpiresAt;
-  //   final String refreshToken;
-  //   final String refreshTokenExpiresAt;
   factory TokensModel.fromJson(Map<String, dynamic> json) {
     return TokensModel(
       tokenType: json['token_type'],

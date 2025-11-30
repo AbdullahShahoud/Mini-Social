@@ -4,17 +4,7 @@ import 'package:social_app/core/services/injection.dart';
 import 'package:social_app/features/posts/presentation/page/search_posts.dart';
 import '../cubit/cubit/posts_cubit_cubit.dart';
 import '../widget/post_item.dart';
-// // جلب جميع المنشورات
-// context.read<PostsCubitCubit>().getPosts();
 
-// // جلب منشورات بالبحث
-// context.read<PostsCubitCubit>().getPosts(search: 'رحلة');
-
-// // جلب منشورات بالصور فقط
-// context.read<PostsCubitCubit>().getPosts(mediaType: 'image');
-
-// // جلب 20 منشور
-// context.read<PostsCubitCubit>().getPosts(perPage: 20);
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 

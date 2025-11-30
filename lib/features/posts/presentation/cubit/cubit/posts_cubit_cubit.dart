@@ -53,7 +53,6 @@ class PostsCubitCubit extends Cubit<PostsCubitState> {
     response.fold((failure) => emit(GetPostsCubitEroor(failure.message)), (
       postsResponse,
     ) {
-      print('✅ ✅✅✅');
       emit(GetPostsCubitSuccess(postsResponse));
       posts = postsResponse;
     });

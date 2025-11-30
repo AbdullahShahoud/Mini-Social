@@ -6,9 +6,7 @@ class RefreshTokenRequest {
   RefreshTokenRequest({required this.refreshToken});
 
   String toJsonString() {
-    return jsonEncode({
-      'refresh_token': refreshToken, // ⬅️ الاسم الصحيح
-    });
+    return jsonEncode({'refresh_token': refreshToken});
   }
 
   Map<String, dynamic> toJson() {

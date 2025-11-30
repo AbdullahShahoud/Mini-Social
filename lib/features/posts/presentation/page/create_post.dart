@@ -1,13 +1,10 @@
 // ignore_for_file: must_be_immutable
-
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social_app/features/auth/presentation/widget/button.dart';
 import 'package:social_app/features/auth/presentation/widget/text_form_field.dart';
 import '../../../../core/routing/router.dart';
 import '../../../../core/services/posts_image.dart';
-import '../../../../core/services/secure_storage.dart';
 import '../cubit/cubit/posts_cubit_cubit.dart';
 
 TextEditingController title = TextEditingController();
@@ -143,36 +140,10 @@ class _CreatePostsState extends State<CreatePosts> {
 
 void clickCreate(BuildContext context) {
   if (key.currentState!.validate()) {
-    testApi();
     context.read<PostsCubitCubit>().createPost(
       title.text,
       content.text,
       photo!,
     );
-  }
-}
-
-void testApi() async {
-  try {
-    Dio _dio = Dio();
-    var response = await _dio.post(
-      'http://161.97.64.130:8081/api/posts',
-      data: {
-        "title": "JaneDoess",
-        "content": "janess@example.com",
-        "mediaFiles":
-            "[ccc/data/user/0/com.example.social_app/cache/file_picker/1764420332358/IMG-20251129-WA0006.jpg]",
-      },
-      options: Options(
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer ${StorageToken.getSecureString('token')}',
-        },
-      ),
-    );
-    print('SUCCESS: ${response.data}');
-  } catch (e) {
-    print('ERROR: $e');
   }
 }

@@ -48,7 +48,4 @@ Future<void> init() async {
   getIt.registerFactory(() => DeletePostsRepo(getIt()));
   getIt.registerFactory(() => EditePostsRepo(getIt()));
   getIt.registerFactory(() => CreatePostsRepo());
-  // // حالات البلوك
-  // getIt.registerFactory(() => UserCubit(userRepository: getIt()));
-  // getIt.registerFactory(() => ProductCubit(productRepository: getIt()));
 }

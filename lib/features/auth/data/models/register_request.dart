@@ -12,8 +12,4 @@ class RegisterRequest {
   String toJsonString() {
     return "{  \"name\": \"${name}\",\n  \"email\": \"${email}\",\n  \"password\": \"${password}\"\n}";
   }
-
-  // Map<String, dynamic> toJson() {
-  //   return {'name': name, 'email': email, 'password': password};
-  // }
 }

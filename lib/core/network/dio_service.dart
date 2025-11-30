@@ -45,13 +45,9 @@ class DioServicies {
           );
           if (error.response?.statusCode == 401) {
             try {
-              print('🔄 اكتشاف 401، تجديد الـ token...');
-
-              // استدعاء الـ Cubit مباشرة
               final cubit = getIt<LoginCubitCubit>();
               await cubit.referacheToken();
 
-              // أعد الطلب الأصلي بالـ token الجديد
               final token = await StorageToken.getSecureString('token');
               error.requestOptions.headers['Authorization'] = 'Bearer $token';
 
@@ -170,7 +166,6 @@ class DioServicies {
     }
   }
 
-  // معالجة الاستجابة الناجحة فقط
   Either<Failure, T> _handleResponse<T>(
     Response response,
     T Function(Map<String, dynamic>) fromJson,
